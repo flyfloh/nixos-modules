@@ -8,6 +8,7 @@
   outputs = { self, nixpkgs }: {
 
     nixosModules = {
+      cattle = import modules/cattle.nix;
       desktop = import modules/desktop.nix;
     };
   };
