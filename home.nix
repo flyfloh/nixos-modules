@@ -17,7 +17,6 @@
     };
     shellAliases = {
       gis = "git status --short";
-      kubectl = "k3s kubectl";
       m = "make -j";
       m1 = "make";
       mc = "make clean";
@@ -41,6 +40,7 @@
       cm = "commit -m";
       co = "checkout";
       cp = "cherry-pick";
+      ct = "checkout --track";
       fo = "fetch origin";
       fu = "fetch upstream";
       ldiff = "log -p --pretty=fuller --abbrev-commit --stat";
@@ -62,7 +62,59 @@
     terminal = "screen-256color";
     historyLimit = 10000;
     extraConfig = ''
+      # unbind default prefix and set it to ctrl-a
+      #unbind C-b
+      #set -g prefix C-a
+      #bind C-a send-prefix
+
+      # make delay shorter
+      set -sg escape-time 0
+
+      #### key bindings ####
+
+      # reload config file
+      bind r source-file ~/.tmux.conf \; display ".tmux.conf reloaded!"
+
+      # quickly open a new window
+      bind N new-window
+
+      # synchronize all panes in a window
+      bind y setw synchronize-panes
+
+      # pane movement shortcuts (same as vim)
+      bind h select-pane -L
+      bind j select-pane -D
+      bind k select-pane -U
+      bind l select-pane -R
+
+      # use | and _ for splits
+      unbind %
+      bind | split-pane -h
+      unbind \"
+      bind _ split-pane
+
+      # resize shortcuts
+      bind C-h resize-pane -L 10
+      bind C-l resize-pane -R 10
+
+      # enable mouse support for switching panes/windows
+      # set -g mouse-utf8 on
       set -g mouse on
+
+      #### copy mode : vim ####
+      # set vi mode for copy mode
+      setw -g mode-keys vi
+
+      # copy mode using 'Esc'
+      unbind [
+      bind Escape copy-mode
+
+      # start selection with 'space' and copy using 'y'
+      # bind -t vi-copy 'y' copy-selection
+
+      # paste using 'p'
+      unbind p
+      bind p paste-buffer
     '';
   };
 
