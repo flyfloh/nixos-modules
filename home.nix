@@ -53,6 +53,7 @@
       up = "pull --rebase";
     };
     extraConfig = { core = { editor = "vim"; }; };
+    lfs.enable = true;
   };
 
   programs.tmux = {
