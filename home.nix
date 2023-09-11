@@ -22,6 +22,7 @@
       mc = "make clean";
       mpwd = "pwgen -sy -N1 32";
       od = "objdump -lSd -Mintel";
+      open = "xdg-open";
       zshrc = "vim ~/.config/nixpkgs/home.nix";
     };
   };
