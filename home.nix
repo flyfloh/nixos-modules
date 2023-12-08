@@ -131,6 +131,7 @@
                 snipmate
                 The_NERD_tree
                 vim-airline
+                vim-astro
                 vim-coffee-script
                 vim-colors-solarized
                 vim-elixir
