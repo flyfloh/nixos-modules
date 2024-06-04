@@ -37,12 +37,14 @@ in {
     sound.enable = true;
     hardware.pulseaudio.enable = true;
 
+    services.libinput.enable = true;
     services.xserver = {
       enable = true;
-      layout = "us";
-      xkbVariant = "dvorak";
-      xkbOptions = "eurosign:e";
-      libinput.enable = true;
+      xkb = {
+        layout = "us";
+        variant = "dvorak";
+        options = "eurosign:e";
+      };
     } // dm;
   };
 }
