@@ -34,8 +34,6 @@ in {
     networking.networkmanager.enable = true;
     networking.wireless.enable = false;
 
-    hardware.pulseaudio.enable = true;
-
     services.libinput.enable = true;
     services.xserver = {
       enable = true;
