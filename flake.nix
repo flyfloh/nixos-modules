@@ -10,7 +10,7 @@
     nixosModules = {
       cattle = import modules/cattle.nix;
       desktop = import modules/desktop.nix;
-      flavours = import modules/vaapi.nix;
+      flavours = import modules/flavours.nix;
     };
   };
 
