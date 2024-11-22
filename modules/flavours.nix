@@ -3,6 +3,7 @@
 {
   imports = [
     ./gaming.nix
+    ./gnome.nix
     ./vaapi.nix
   ];
 }
