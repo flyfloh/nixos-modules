@@ -19,6 +19,7 @@ in {
 
     environment.systemPackages = with pkgs; [
       #steam-run-native
+      heroic
       steam
       wineWowPackages.stable
       #(winetricks.override { wine = wineWowPackages.stable; })
