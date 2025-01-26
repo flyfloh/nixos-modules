@@ -33,6 +33,7 @@
 
   environment.systemPackages = with pkgs; [
     git
+    htop
     ripgrep
     tmux
     vim
