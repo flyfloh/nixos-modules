@@ -16,6 +16,9 @@
       sandbox = true;
       trusted-users = [ "root" "@wheel" ];
     };
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
   };
 
   networking.useDHCP = false;
