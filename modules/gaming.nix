@@ -15,7 +15,7 @@ in {
       enable32Bit = true;
       extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
     };
-    hardware.pulseaudio.support32Bit = true;
+    services.pulseaudio.support32Bit = true;
 
     environment.systemPackages = with pkgs; [
       #steam-run-native
