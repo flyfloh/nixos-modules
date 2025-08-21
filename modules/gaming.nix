@@ -12,6 +12,7 @@ in {
   config = lib.mkIf cfg.enable {
     nixpkgs.config.allowUnfree = true;
     hardware.graphics = {
+      enable = true;
       enable32Bit = true;
       extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
     };
