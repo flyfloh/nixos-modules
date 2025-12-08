@@ -11,7 +11,7 @@ in {
 
   config = lib.mkIf cfg.enable {
     nixpkgs.config.packageOverrides = pkgs: {
-      vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+      vaapiIntel = pkgs.intel-vaapi-driver.override { enableHybridCodec = true; };
     };
     hardware.graphics = {
       enable = true;
