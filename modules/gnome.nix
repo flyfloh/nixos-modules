@@ -28,7 +28,6 @@ in {
     };
 
     environment.systemPackages = with pkgs; [
-      bookworm
       direnv
       element-desktop
       firefox
