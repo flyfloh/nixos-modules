@@ -13,13 +13,13 @@ in {
     networking.wireless.enable = false;
 
     services.libinput.enable = true;
+    services.displayManager.gdm = {
+      enable = true;
+      wayland = true;
+    };
+    services.desktopManager.gnome.enable = true;
     services.xserver = {
       enable = true;
-      displayManager.gdm = {
-        enable = true;
-        wayland = true;
-      };
-      desktopManager.gnome.enable = true;
       xkb = {
         layout = "us";
         variant = "dvorak";
