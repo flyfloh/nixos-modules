@@ -34,26 +34,28 @@
 
   programs.git = {
     enable = true;
-    aliases = {
-      aa = "add .";
-      au = "add -u";
-      cb = "checkout -b";
-      cm = "commit -m";
-      co = "checkout";
-      cp = "cherry-pick";
-      ct = "checkout --track";
-      fo = "fetch origin";
-      fu = "fetch upstream";
-      ldiff = "log -p --pretty=fuller --abbrev-commit --stat";
-      lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an> %Creset' --abbrev-commit";
-      puh = "push -u origin HEAD";
-      psuh = "push";
-      rco = "reset HEAD~1";
-      rebasi = "rebase -i";
-      rem = "rebase -i --autosquash upstream/master";
-      up = "pull --rebase";
+    settings = {
+      aliases = {
+        aa = "add .";
+        au = "add -u";
+        cb = "checkout -b";
+        cm = "commit -m";
+        co = "checkout";
+        cp = "cherry-pick";
+        ct = "checkout --track";
+        fo = "fetch origin";
+        fu = "fetch upstream";
+        ldiff = "log -p --pretty=fuller --abbrev-commit --stat";
+        lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an> %Creset' --abbrev-commit";
+        puh = "push -u origin HEAD";
+        psuh = "push";
+        rco = "reset HEAD~1";
+        rebasi = "rebase -i";
+        rem = "rebase -i --autosquash upstream/master";
+        up = "pull --rebase";
+      };
+      core = { editor = "vim"; };
     };
-    extraConfig = { core = { editor = "vim"; }; };
     lfs.enable = true;
   };
 
