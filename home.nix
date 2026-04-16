@@ -35,7 +35,7 @@
   programs.git = {
     enable = true;
     settings = {
-      aliases = {
+      alias = {
         aa = "add .";
         au = "add -u";
         cb = "checkout -b";
