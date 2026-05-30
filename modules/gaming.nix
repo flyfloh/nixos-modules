@@ -22,7 +22,7 @@ in {
       #steam-run-native
       heroic
       steam
-      wineWowPackages.stable
+      wineWow64Packages.stable
       #(winetricks.override { wine = wineWowPackages.stable; })
     ];
     services.joycond.enable = true;
