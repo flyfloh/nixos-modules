@@ -10,7 +10,6 @@ in {
 
   config = lib.mkIf cfg.enable {
     networking.networkmanager.enable = true;
-    networking.wireless.enable = false;
 
     services.libinput.enable = true;
     services.displayManager.gdm = {
