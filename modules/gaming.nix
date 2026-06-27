@@ -16,14 +16,21 @@ in {
       enable32Bit = true;
       extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
     };
+
+    programs.gamemode.enable = true;
+    programs.steam.enable = true;
+
     services.pulseaudio.support32Bit = true;
 
     environment.systemPackages = with pkgs; [
-      #steam-run-native
+      (heroic.override {
+        extraPkgs = pkgs': with pkgs'; [
+          gamemode
+        ];
+      })
+
       heroic
-      steam
       wineWow64Packages.stable
-      #(winetricks.override { wine = wineWowPackages.stable; })
     ];
     services.joycond.enable = true;
   };
