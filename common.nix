@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = lib.mkForce true;
   hardware.enableAllFirmware = true;
 
   time.timeZone = "Europe/Berlin";
