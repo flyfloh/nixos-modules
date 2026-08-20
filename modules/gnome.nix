@@ -18,7 +18,7 @@ in {
     services.desktopManager.gnome.enable = true;
     services.xserver = {
       enable = true;
-      xkb = {
+      xkb = lib.mkDefault {
         layout = "us";
         variant = "dvorak";
         options = "eurosign:e";
