@@ -127,11 +127,11 @@
     plugins = with pkgs.vimPlugins; [
                 ack-vim
                 command-t
-                fugitive
-                fzfWrapper
+                vim-fugitive
+                fzf-wrapper
                 fzf-vim
-                snipmate
-                The_NERD_tree
+                vim-snipmate
+                nerdtree
                 vim-airline
                 vim-astro
                 vim-coffee-script
